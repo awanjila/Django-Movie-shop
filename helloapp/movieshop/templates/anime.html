@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>Your favorie anime page</h2>
+
+	<div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped tablesorter">
+                <thead>
+                <tr>
+                  <th class="header"> Title <i class="icon-sort"></i></th>
+                  <th class="header"> OverView <i class="icon-sort"></i></th>
+                  <th class="header"> Tagline<i class="icon-sort"></i></th>
+                  <th class="header"> Poster Path <i class="icon-sort"></i></th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+            
+            {% for key in data %}
+                <tr>
+                    <td>{{ key.overview }}</td>
+                    <td>{{ key.tagline }}</td>
+                    <td>{{ key.title }}</td>
+                    <td>{{ key.poster_path }}</td>
+                    
+                </tr>
+            {% endfor %}
+            
+            </tbody>
+            </table>
+        </div>
+    </div>
+<div>
+	<a href="/">Back To Nzuri </a>
+</div>
+</body>
+</html>

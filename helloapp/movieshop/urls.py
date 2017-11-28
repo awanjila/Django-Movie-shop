@@ -3,6 +3,9 @@
 from django.conf.urls import url
 from movieshop import views
 
-urlpatterns=[
-		url(r'^$', views.HomePageView.as_view()),
-		]
+urlpatterns =[
+	url(r'^$', views.index, name='index'),
+	url(r'^anime/$', views.anime, name='anime'),
+	url(r'^profile/$', views.profile, name='profile')
+
+	]
